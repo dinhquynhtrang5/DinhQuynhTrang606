@@ -3,6 +3,7 @@ using DinhQuynhTrang606.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DinhQuynhTrang606.Migrations
 {
     [DbContext(typeof(DinhQuynhTrang606Context))]
-    partial class DinhQuynhTrang606ContextModelSnapshot : ModelSnapshot
+    [Migration("20230104013323_Create_Table_DQT606")]
+    partial class CreateTableDQT606
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,26 +38,6 @@ namespace DinhQuynhTrang606.Migrations
                     b.HasKey("CompanyId");
 
                     b.ToTable("CompanyDQT606");
-                });
-
-            modelBuilder.Entity("DinhQuynhTrang606.Models.DQT0606", b =>
-                {
-                    b.Property<string>("DQTId")
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("DQTGender")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DQTName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("DQTId");
-
-                    b.ToTable("DQT0606");
                 });
 #pragma warning restore 612, 618
         }

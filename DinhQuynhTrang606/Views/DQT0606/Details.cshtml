@@ -1,0 +1,30 @@
+﻿@model DinhQuynhTrang606.Models.DQT0606
+
+@{
+    ViewData["Title"] = "Đọc";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>DQT0606</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DQTName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DQTName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DQTGender)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DQTGender)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.DQTId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

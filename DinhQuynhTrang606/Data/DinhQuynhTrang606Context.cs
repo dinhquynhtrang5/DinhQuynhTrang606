@@ -15,5 +15,7 @@ namespace DinhQuynhTrang606.Data
         }
 
         public DbSet<DinhQuynhTrang606.Models.CompanyDQT606> CompanyDQT606 { get; set; } = default!;
+
+        public DbSet<DinhQuynhTrang606.Models.DQT0606> DQT0606 { get; set; }
     }
 }

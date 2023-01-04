@@ -3,6 +3,7 @@ using DinhQuynhTrang606.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DinhQuynhTrang606.Migrations
 {
     [DbContext(typeof(DinhQuynhTrang606Context))]
-    partial class DinhQuynhTrang606ContextModelSnapshot : ModelSnapshot
+    [Migration("20230104014305_Create_Table_DQT0606")]
+    partial class CreateTableDQT0606
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
